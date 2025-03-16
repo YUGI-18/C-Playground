@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run C Program",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "main.c",
+                "functions.c",
+                "-o",
+                "myapp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run C Program",
+            "type": "shell",
+            "command": "./myapp",
+            "dependsOn": "Build and Run C Program"
+        }
+    ]
+}
